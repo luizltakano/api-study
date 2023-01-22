@@ -26,16 +26,35 @@ app.get("/comments", (req, res) => {
     res.json(data)
 })
 
-app.post("/comment", (req, res) => {
-    
-    const newComment = {
-        content: req.body.content,
-        author: req.body.author,
-        location: req.body.location,
-        id: uuid()
+app.get("/comment/:id", (req, res) => {
+    const id = req.params.id
+    console.log(id)
+    const content = data.comments.find(item => item.id === id)
+    console.log(content)
+
+    if(!content){
+        return res.sendStatus(404)
     }
 
-    if(!newComment.content || !newComment.author || !newComment.location){
+    res.status(201).json(content)
+})
+
+app.post("/comment", (req, res) => {
+    
+    const content = req.body.content
+    const author = req.body.author
+    const location = req.body.location
+    
+    const newComment = {
+        id: uuid(),
+        properties: {
+            content,
+            author,
+            location
+        }
+    }
+
+    if(!content || !author || !location){
         return res.sendStatus(400);
     }
 
