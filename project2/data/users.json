@@ -1,0 +1,53 @@
+[
+    {
+        "username": "nicename",
+        "email": "nicename@email",
+        "fname": "Nice",
+        "lname": "Name",
+        "location": "Brazil",
+        "hobbies":[
+            {
+                "id": "001",
+                "title": "Play Tennis"
+            },
+            {
+                "id": "002",
+                "title": "Eat Lasagna"
+            }
+        ]
+    },
+    {
+        "username": "ohmyglob",
+        "email": "glob@email",
+        "fname": "Glob",
+        "lname": "Globbers",
+        "location": "Spain",
+        "hobbies":[
+            {
+                "id": "009",
+                "title": "Fly with my own wings"
+            },
+            {
+                "id": "010",
+                "title": "Eat Clouds"
+            }
+        ]
+    },
+    {
+        "username": "realperson",
+        "email": "imreal@email",
+        "fname": "Real",
+        "lname": "Person",
+        "location": "United States",
+        "hobbies":[
+            {
+                "id": "021",
+                "title": "Jogging"
+            },
+            {
+                "id": "023",
+                "title": "Playing the guitar"
+            }
+        ]
+    }
+]
