@@ -5,7 +5,7 @@ const postReq = require("./methods/post-request.js");
 const pullReq = require("./methods/pull-request.js");
 const deleteReq = require("./methods/delete-request.js");
 
-let users = require("./data/users.json")
+let users = require("./data/users.json");
 
 const PORT = 3000;
 
