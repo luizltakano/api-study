@@ -24,10 +24,5 @@ module.exports = (req, res) => {
                 JSON.stringify(user)
             );
             res.end();
-    } else {
-        res.writeHead(404, {"Content-Type": "application/json"})
-        res.end(
-            JSON.stringify({title: "Not Found", message: "Route Not Found"})
-            );
     }
 };
