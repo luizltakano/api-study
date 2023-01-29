@@ -9,6 +9,7 @@ app.use(express.json());
 
 const data = {comments:[]};
 
+//Get an outfit
 app.get("/outfit", (req, res, next) => {
 
     const tops = ["white", "black", "grey", "green", "blue"];
@@ -22,10 +23,12 @@ app.get("/outfit", (req, res, next) => {
     });
 });
 
+//Get all Comments
 app.get("/comments", (req, res) => {
     res.json(data)
 })
 
+//Get a Comment
 app.get("/comment/:id", (req, res) => {
     const id = req.params.id
     console.log(id)
@@ -39,6 +42,7 @@ app.get("/comment/:id", (req, res) => {
     res.status(201).json(content)
 })
 
+//Create a Comment
 app.post("/comment", (req, res) => {
     
     const content = req.body.content
