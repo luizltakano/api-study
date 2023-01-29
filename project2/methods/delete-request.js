@@ -6,7 +6,7 @@ module.exports = (req, res) => {
     const user = req.users.filter(user => {
         return user.username === username
     });
-
+    
     if(user.length < 1){
         res.writeHead(400, {"Content-Type": "application/json"})
         res.end(

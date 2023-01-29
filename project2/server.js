@@ -2,7 +2,7 @@ const http = require("http");
 
 const getReq = require("./methods/get-request.js");
 const postReq = require("./methods/post-request.js");
-const pullReq = require("./methods/pull-request.js");
+const putReq = require("./methods/put-request.js");
 const deleteReq = require("./methods/delete-request.js");
 
 let users = require("./data/users.json");
@@ -18,8 +18,8 @@ const server = http.createServer((req, res) => {
         case "POST":
             postReq(req, res)
             break
-        case "PULL":
-            pullReq(req, res)
+        case "PUT":
+            putReq(req, res)
             break
         case "DELETE":
             deleteReq(req, res)
