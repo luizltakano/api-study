@@ -1,1 +1,50 @@
-[{"id":"00000000001","username":"nicename","email":"nicename@email.com","fname":"Nice","lname":"Name","location":"Brazil","hobbies":[{"id":"001","title":"Play Tennis"},{"id":"002","title":"Eat Lasagna"}]},{"id":"00000000010","username":"ohmyglob","email":"glob@email.com","fname":"Glob","lname":"Globbers","location":"Spain","hobbies":[{"id":"009","title":"Fly with my own wings"},{"id":"010","title":"Eat Clouds"}]},{"id":"00000000101","username":"realperson","email":"imreal@email.com","fname":"Real","lname":"Person","location":"United States","hobbies":[{"id":"021","title":"Jogging"},{"id":"023","title":"Playing the guitar"}]},{"id":"00022000101","username":"machoman","email":"machoman@email.com","fname":"Macho","lname":"Man Man","location":"Russia","hobbies":[{"id":"221","title":"Machoing"},{"id":"323","title":"Mans twerk"}]}]
+[
+	{
+		"id": "00000000001",
+		"username": "nicename",
+		"email": "nicename@email.com",
+		"fname": "Nice",
+		"lname": "Name",
+		"location": "Brazil",
+		"hobbies": [
+			{ "id": "001", "title": "Play Tennis" },
+			{ "id": "002", "title": "Eat Lasagna" }
+		]
+	},
+	{
+		"id": "00000000010",
+		"username": "ohmyglob",
+		"email": "glob@email.com",
+		"fname": "Glob",
+		"lname": "Globbers",
+		"location": "Spain",
+		"hobbies": [
+			{ "id": "009", "title": "Fly with my own wings" },
+			{ "id": "010", "title": "Eat Clouds" }
+		]
+	},
+	{
+		"id": "00000000101",
+		"username": "realperson",
+		"email": "imreal@email.com",
+		"fname": "Real",
+		"lname": "Person",
+		"location": "United States",
+		"hobbies": [
+			{ "id": "021", "title": "Jogging" },
+			{ "id": "023", "title": "Playing the guitar" }
+		]
+	},
+	{
+		"id": "00022000101",
+		"username": "machoman",
+		"email": "machoman@email.com",
+		"fname": "Macho",
+		"lname": "Man Man",
+		"location": "Russia",
+		"hobbies": [
+			{ "id": "221", "title": "Machoing" },
+			{ "id": "323", "title": "Mans twerk" }
+		]
+	}
+]
