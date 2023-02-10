@@ -1,5 +1,6 @@
 .vscode
 .DS_Store
+nodemon.json
 
 # Logs
 logs
