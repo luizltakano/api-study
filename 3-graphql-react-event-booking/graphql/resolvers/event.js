@@ -15,14 +15,17 @@ module.exports = {
 			throw err;
 		}
 	},
-	createEvent: async (args) => {
+	createEvent: async (args, req) => {
+		if (!req.isAuth) {
+			throw new Error("Unauthenticated");
+		}
 		// create a new event using the input arguments
 		const event = new Event({
 			title: args.eventInput.title,
 			description: args.eventInput.description,
 			price: +args.eventInput.price,
 			date: stringToDate(new Date()),
-			creator: "63e6ae7573e392cfd0d68efe",
+			creator: req.userId,
 		});
 		let createdEvent;
 

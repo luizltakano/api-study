@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 // Require GraphQL Schema and Resolvers
 const graphQlSchema = require("./graphql/schema/index");
 const graphQlResolvers = require("./graphql/resolvers/index");
+const isAuth = require("./middleware/is-auth");
 
 // Create an instance of Express
 const app = express();
@@ -12,6 +13,9 @@ const app = express();
 // Enable JSON and URL-encoded body parsing middleware in Express
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Use the middleware isAuth to authenticate API requests
+app.use(isAuth);
 
 // use the "/graphql" endpoint with graphqlHTTP middleware
 app.use(
