@@ -1,0 +1,23 @@
+.event-control {
+	margin: 7rem auto 3rem;
+	padding: 1rem;
+	width: 30rem;
+	max-width: 80%;
+	height: 10rem;
+	border: unset;
+	border-radius: 0.25rem;
+	text-align: center;
+	outline-color: rgb(84 105 212 / 0.5);
+	box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+		rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(60, 66, 87, 0.16) 0px 0px 0px 1px,
+		rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+		rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+}
+
+.event-control button {
+	margin: 0;
+	margin-top: 1rem;
+	padding: 0.5rem;
+	width: 30%;
+	min-width: 30%;
+}

@@ -1,0 +1,12 @@
+.events__list-item {
+	margin: 1rem 0;
+	padding: 1rem;
+	border: unset;
+	border-radius: 0.25rem;
+	text-align: center;
+	outline-color: rgb(84 105 212 / 0.5);
+	box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+		rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(60, 66, 87, 0.16) 0px 0px 0px 1px,
+		rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+		rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+}

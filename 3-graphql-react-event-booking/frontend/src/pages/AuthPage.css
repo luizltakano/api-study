@@ -1,0 +1,9 @@
+.auth-form {
+	width: 20rem;
+	padding-top: 2rem;
+	margin: auto;
+	height: 80%;
+	display: flex;
+	flex-direction: column;
+	row-gap: 1.5rem;
+}

@@ -1,0 +1,68 @@
+.main-content {
+	margin: 5rem 2.5rem 0;
+}
+
+.form-control {
+	display: flex;
+	flex-direction: column;
+	row-gap: 0.5rem;
+}
+
+.form-control input,
+.form-control textarea {
+	font-size: 1rem;
+	padding: 0.5rem 1rem;
+	min-height: 2rem;
+	border: unset;
+	border-radius: 0.25rem;
+	outline-color: rgb(84 105 212 / 0.5);
+	background-color: rgb(255, 255, 255);
+	box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+		rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(60, 66, 87, 0.16) 0px 0px 0px 1px,
+		rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+		rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+	font-family: inherit;
+	font-size: inherit;
+}
+
+.form-actions {
+	display: flex;
+	column-gap: 1rem;
+	justify-content: center;
+	margin-top: 1rem;
+}
+
+.btn {
+	font-size: 1rem;
+	padding: 0.5rem 1rem;
+	width: 100%;
+	min-height: 2rem;
+	border: unset;
+	border-radius: 0.25rem;
+	outline-color: rgb(84 105 212 / 0.5);
+	background-color: rgb(84, 105, 212);
+	box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+		rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, rgb(84, 105, 212) 0px 0px 0px 1px,
+		rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+		rgba(60, 66, 87, 0.08) 0px 2px 5px 0px;
+	color: #fff;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.btn:hover,
+.btn:active {
+	color: #fff;
+	background-color: rgb(40, 65, 191);
+}
+
+.btn__secondary {
+	color: rgb(84, 105, 212);
+	background-color: #fff;
+}
+
+.btn__secondary:hover,
+.btn__secondary:active {
+	color: rgb(40, 65, 191);
+	background-color: #efefef;
+}
