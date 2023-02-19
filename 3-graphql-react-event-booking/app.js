@@ -14,6 +14,17 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Establish CORS policy
+app.use((req, res, next) => {
+	res.setHeader("Access-Control-Allow-Origin", "*");
+	res.setHeader("Access-Control-Allow-Methods", "GET,POST,OPTIONS");
+	res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+	if (req.method === "OPTIONS") {
+		return res.sendStatus(200);
+	}
+	next();
+});
+
 // Use the middleware isAuth to authenticate API requests
 app.use(isAuth);
 
@@ -45,8 +56,8 @@ mongoose
 		connectionParams
 	)
 	.then(
-		app.listen("3000", () => {
-			console.log("Server active on port 3000");
+		app.listen("8000", () => {
+			console.log("Server active on port 8000");
 		})
 	)
 	.catch((err) => console.log(err));

@@ -4,9 +4,9 @@ const Event = require("../../models/events");
 const Booking = require("../../models/bookings");
 
 module.exports = {
-	bookings: async () => {
+	bookings: async (args, req) => {
 		try {
-			const bookings = await Booking.find();
+			const bookings = await Booking.find({ user: { _id: req.userId } });
 			return bookings.map((booking) => {
 				return transformedBooking(booking);
 			});

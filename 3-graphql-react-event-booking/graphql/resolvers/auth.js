@@ -5,6 +5,9 @@ const jwt = require("jsonwebtoken");
 
 const User = require("../../models/users");
 
+const dotenv = require("dotenv");
+dotenv.config();
+
 module.exports = {
 	createUser: async (args) => {
 		try {
@@ -37,17 +40,19 @@ module.exports = {
 		try {
 			const user = await User.findOne({ email: email });
 			if (!user) {
-				throw new Error("Invalid Credentials1");
+				throw new Error("Invalid Credentials");
 			}
 
 			const isValid = await bcrypt.compare(password, user.password);
 			if (!isValid) {
-				throw new Error("Invalid Credentials2");
+				throw new Error("Invalid Credentials");
 			}
+
+			console.log(process.env.JWT_TOKEN);
 
 			const token = await jwt.sign(
 				{ userId: user.id, email: user.email },
-				"thisisasupersecrettoken",
+				process.env.JWT_TOKEN,
 				{
 					expiresIn: "1h",
 				}

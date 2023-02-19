@@ -1,19 +1,27 @@
+const DataLoader = require("dataloader");
 const { stringToDate } = require("../../helpers/date");
 
 const User = require("../../models/users");
 const Event = require("../../models/events");
 
+const eventLoader = new DataLoader((eventIds) => {
+	return events(eventIds);
+});
+
+const userLoader = new DataLoader((userIds) => {
+	return User.find({ _id: { $in: userIds } });
+});
+
 // Manually access the inner properties of each type
 const user = async (userId) => {
 	try {
-		let user = await User.findById(userId.toString());
-		user = {
+		const user = await userLoader.load(userId.toString());
+		return {
 			...user._doc,
 			_id: user.id,
 			password: null,
-			createdEvents: events.bind(this, user._doc.createdEvents),
+			createdEvents: () => eventLoader.loadMany(user._doc.createdEvents),
 		};
-		return user;
 	} catch (err) {
 		throw err;
 	}
@@ -22,6 +30,11 @@ const user = async (userId) => {
 const events = async (eventIds) => {
 	try {
 		const events = await Event.find({ _id: { $in: eventIds } });
+		events.sort((a, b) => {
+			return eventIds.indexOf(
+				a._id.toString() - eventIds.indexOf(b._id.toString())
+			);
+		});
 		return events.map((event) => {
 			return transformedEvent(event);
 		});
@@ -32,8 +45,8 @@ const events = async (eventIds) => {
 
 const singleEvent = async (eventId) => {
 	try {
-		const event = await Event.findById(eventId);
-		return transformedEvent(event);
+		const event = await eventLoader.load(eventId.toString());
+		return event;
 	} catch (err) {
 		throw err;
 	}
